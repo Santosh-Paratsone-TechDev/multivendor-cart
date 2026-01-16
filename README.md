@@ -79,15 +79,18 @@ php artisan db:seed
 # OR USE .sql file to import to you mysql engin
 path = sql/multi_vendor.sql
 
-# admin Login 
+# to tun application
+php artisan serve 
+#http://127.0.0.1:8000
+
 # Url http://127.0.0.1:8000/login
-Email: admin@example.com
-Password: password
 
 #custome login
 Email: customer@example.com
 Password: password
 
+# admin Login # url remain same for login, but when admin logins it will redirect to http://127.0.0.1:8000/admin dashboard
+Email: admin@example.com
+Password: password
+
 ```
-
-
