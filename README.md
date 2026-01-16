@@ -53,22 +53,26 @@ session‑based shopping cart
 git clone https://github.com/Santosh-Paratsone-TechDev/multivendor-cart.git
 cd multivendor-cart
 
-
+# package installation
 composer install
-npm install && npm run build   # optional if using Vite assets
+
+# dependency installation
+npm install 
+npm run build   
 
 #  Environment setup
 cp .env.example .env
-php artisan key:generate
 
-#update Db creds for local setup
-
+#update Db creds for local setup .env
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
 DB_DATABASE=multi_vendor
 DB_USERNAME=root
 DB_PASSWORD=
+
+# app encryption key generation
+php artisan key:generate
 
 # for migration
 php artisan migrate
@@ -86,7 +90,7 @@ php artisan serve
 # Url http://127.0.0.1:8000/login
 
 #custome login
-Email: customer@example.com
+Email: customer@test.com
 Password: password
 
 # admin Login # url remain same for login, but when admin logins it will redirect to http://127.0.0.1:8000/admin dashboard
