@@ -1,0 +1,93 @@
+# Laravel 12 Multi‑Vendor Cart & Admin Panel
+
+A clean, modular multi‑vendor admin panel built using **Laravel 12**, **Blade**, and **Bootstrap 5**.  
+This project demonstrates a production‑ready structure for managing vendors, customers, products, and orders with a custom admin UI.
+session‑based shopping cart
+
+---
+
+## Features
+
+### Authentication
+
+-   Laravel Breeze (Blade)
+-   Admin‑only access to `/admin/*`
+
+### Admin Dashboard
+
+-   Total Orders
+-   Total Customers
+-   Total Vendors
+-   Clean Bootstrap UI
+
+### Orders Module
+
+-   List all orders
+-   Filters: vendor, customer, status
+-   Order details page
+-   Pagination with query persistence
+
+### Products Module
+
+-   Product list with filters
+-   Create / Edit product
+-   Stock management
+-   Vendor assignment
+-   Pagination
+
+### UI/UX
+
+-   Custom Bootstrap admin layout
+-   Sidebar navigation
+-   Top navbar with user name + logout
+-   Toast alerts for create/update/delete
+-   Custom admin logo
+
+---
+
+## Installation
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/Santosh-Paratsone-TechDev/multivendor-cart.git
+cd multivendor-cart
+
+
+composer install
+npm install && npm run build   # optional if using Vite assets
+
+#  Environment setup
+cp .env.example .env
+php artisan key:generate
+
+#update Db creds for local setup
+
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=multi_vendor
+DB_USERNAME=root
+DB_PASSWORD=
+
+# for migration
+php artisan migrate
+
+# for DB seed
+php artisan db:seed
+
+# OR USE .sql file to import to you mysql engin
+path = sql/multi_vendor.sql
+
+# admin Login 
+# Url http://127.0.0.1:8000/login
+Email: admin@example.com
+Password: password
+
+#custome login
+Email: customer@example.com
+Password: password
+
+```
+
+
